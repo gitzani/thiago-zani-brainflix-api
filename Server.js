@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const dataPath = "./data.json";
 const bodyParser = require("body-parser");
 const serverRoutes = require("./src/assets/routes/routes");
 
