@@ -2,7 +2,10 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const serverRoutes = require("./src/assets/routes/routes");
+const serverRoutes = require("./routes/videos");
+const path = require("path");
+const publicDirectory = path.join(__dirname, '..', 'public');
+app.use(express.static(publicDirectory));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
